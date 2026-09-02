@@ -38,9 +38,9 @@ class Customer:
         sorted_dict = dict(sorted(dict_of_shops.items(),
                                   key=lambda item: item[1]))
         shop_name_cheap = next(iter(sorted_dict))
-        for i in shop:
-            if i.name == shop_name_cheap:
-                self.cheapest_shop_for_customer = i
+        for shops in shop:
+            if shops.name == shop_name_cheap:
+                self.cheapest_shop_for_customer = shops
                 break
         self.location = self.cheapest_shop_for_customer.location.copy()
         return f"{self.name} rides to {shop_name_cheap}"
