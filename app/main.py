@@ -9,11 +9,13 @@ def shop_trip() -> None:
     new_dict = dict_if_info["customers"]
     new_dict_of_shops = dict_if_info["shops"]
 
+    price_of_fuel = dict_if_info["FUEL_PRICE"]
+
     list_of_customers = []
     list_of_shops = []
 
     for i in new_dict:
-        list_of_customers.append(Customer(i))
+        list_of_customers.append(Customer(i, price_of_fuel))
 
     for i in new_dict_of_shops:
         list_of_shops.append(Shop(i))
